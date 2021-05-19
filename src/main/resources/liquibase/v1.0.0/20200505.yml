@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: de-v1.0.0-20200505-1
+      author: xiaoming
+      changes:
+        - createTable:
+            tableName: biaoming(表名)
+            remarks: 信息表
+            columns:
+              - column:
+                  name: PROCESSINSTANCE_ID
+                  type: varchar(64)
+              - column:
+                  name: VIRTUAL_INFO
+                  type: mediumtext
+              - column:
+                  name: VIRTUAL_PARAM
+                  type: mediumtext
+              - column:
+                  name: FFR_VIRTUAL_ID
+                  type: bigint(20)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  remarks: 主键
